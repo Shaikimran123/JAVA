@@ -1,0 +1,34 @@
+package javaBasicTopics.Day6;
+
+public class replacesecondone {
+
+	public String Capscase(String s,char find,char rep) {
+		
+		char[] a=s.toCharArray();
+		
+		int co=0;
+		for(int i=0;i<a.length;i++)
+		
+		{			
+			if(a[i]==find)
+			{
+				a[i]=rep;
+				break;
+			}
+							
+		}
+		return new String(a);
+		
+	}
+		
+	
+	public static void main(String[] args) {
+
+		String str="Hellllllo";
+		String strin=new replacesecondone().Capscase(str,'l','k');
+		System.out.println(strin);
+	}
+
+}
+
+
