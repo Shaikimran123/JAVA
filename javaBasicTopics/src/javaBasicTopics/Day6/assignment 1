@@ -1,0 +1,41 @@
+-> create a replace function in a way where it replaces only the second found char
+//myReplaceLast(str, find , replace)
+
+//Helllo , l , k
+//Helklo -> output
+
+
+package javaBasicTopics.Day6;
+
+public class replacesecondone {
+
+	public String Capscase(String s,char find,char rep) {
+		
+		char[] a=s.toCharArray();
+		
+		int co=0;
+		
+		for(int i=0;i<a.length;i++)
+		
+		{			
+			if(a[i]==find)
+				co++;
+			if(a[i]==find && co==2)
+				a[i]=rep;	
+							
+		}	
+		return new String(a);
+		
+	}
+		
+	
+	public static void main(String[] args) {
+
+		String str="Hello";
+		String strin=new replacesecondone().Capscase(str,'l','k');
+		System.out.println(strin);
+	}
+
+}
+
+
